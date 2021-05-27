@@ -6,6 +6,7 @@ const Photo = ({
   likes,
   user: {
     name,
+    instagram_username,
     portfolio_url,
     profile_image: { medium }
   }
@@ -14,12 +15,18 @@ const Photo = ({
     <article className="photo">
       <img src={regular} alt={alt_description} />
       <div className="photo-info">
-        <h4>{name}</h4>
-        <p>{likes}</p>
+        <div>
+          <p> ❤️ {likes}</p>
+          <p> 📘 {alt_description}</p>
+          <p> 📸 {name}</p>
+        </div>
+        <div>
+          <img src={medium} alt={name} className="user-img" />
+          <a rel="noopener noreferrer" target={"_blank"} style={{ color: "#FFF" }} href={`https://instagram.com/${instagram_username}`}>
+            @{instagram_username}
+          </a>
+        </div>
       </div>
-      <a href={portfolio_url}>
-        <img src={medium} alt={name} className="user-img" />
-      </a>
     </article>
   )
 }

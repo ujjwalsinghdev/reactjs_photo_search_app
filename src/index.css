@@ -143,9 +143,11 @@ Stock Photos
   width: 90vw;
   max-width: var(--max-width);
   margin: 0 auto;
+  
 }
 .search-form {
   display: flex;
+  
 }
 .form-input {
   width: 100%;
